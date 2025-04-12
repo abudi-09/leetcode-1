@@ -1,10 +1,10 @@
-class Solution {
+ class Solution {
  public:
   vector<vector<int>> fourSum(vector<int>& nums, int target) {
     vector<vector<int>> ans;
     vector<int> path;
     ranges::sort(nums);
-    nSum(nums, 4, target, 0, nums.size() - 1, path, ans);
+      nSum(nums, 4, target, 0, nums.size() - 1, path, ans);
     return ans;
   }
 
