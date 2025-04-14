@@ -5,8 +5,8 @@ class Solution {
     ListNode* curr = &dummy;
     int carry = 0;
 
-    while (l1 != nullptr || l2 != nullptr || carry > 0) {
-      if (l1 != nullptr) {
+     while (l1 != nullptr || l2 != nullptr || carry > 0) {
+        if (l1 != nullptr) {
         carry += l1->val;
         l1 = l1->next;
       }
