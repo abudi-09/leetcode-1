@@ -5,8 +5,8 @@
     int l = 0;
     int r = height.size() - 1;
 
-    while (l < r) {
-      const int minHeight = min(height[l], height[r]);
+     while (l < r) {
+        const int minHeight = min(height[l], height[r]);
       ans = max(ans, minHeight * (r - l));
       if (height[l] < height[r])
         ++l;
