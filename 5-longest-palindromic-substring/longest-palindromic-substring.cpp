@@ -5,15 +5,15 @@ class Solution {
       return "";
 
     // (start, end) indices of the longest palindrome in s
-    pair<int, int> indices{0, 0};
+     pair<int, int> indices{0, 0};
 
-    for (int i = 0; i < s.length(); ++i) {
-      const auto [l1, r1] = extend(s, i, i);
+     for (int i = 0; i < s.length(); ++i) {
+       const auto [l1, r1] = extend(s, i, i);
       if (r1 - l1 > indices.second - indices.first)
-        indices = {l1, r1};
+         indices = {l1, r1};
       if (i + 1 < s.length() && s[i] == s[i + 1]) {
-        const auto [l2, r2] = extend(s, i, i + 1);
-        if (r2 - l2 > indices.second - indices.first)
+         const auto [l2, r2] = extend(s, i, i + 1);
+         if (r2 - l2 > indices.second - indices.first)
           indices = {l2, r2};
       }
     }
